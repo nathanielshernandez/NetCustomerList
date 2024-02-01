@@ -1,0 +1,66 @@
+# ----- ASP.NET Core -----
+# Build results
+[Bb]in/
+[Oo]bj/
+[Ll]ogs/
+[Ll]og/
+
+# User-specific files
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# IDE - Visual Studio
+.vs/
+.vscode/
+
+# ----- Angular/Node -----
+# Dependencies
+node_modules/
+package-lock.json
+
+# Compiled output
+/dist
+/tmp
+/out-tsc
+
+# Logs
+*.log
+npm-debug.log*
+
+# IDE - Visual Studio Code
+.history/
+
+# ----- Common -----
+# Operating System Files
+.DS_Store
+Thumbs.db
+
+# IDE specific files
+.idea/
+*.swp
+*.swo
+
+# ----- Optional -----
+# You might need to uncomment these depending on your project's structure and requirements
+
+# Environment Variables
+# .env
+
+# Visual Studio Code
+# .vscode/
+
+# Rider
+# .idea/
+
+# User-specific files
+# *.rsuser
+
+# SQL Server files
+# *.mdf
+# *.ldf
+
+# SQLite database files
+# *.db
+# *.sqlite

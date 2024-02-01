@@ -1,0 +1,59 @@
+<form [formGroup]="customerForm">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h1 class="modal-title fs-5" id="addCustomerModalLabel">Add Customer</h1>
+      <button type="button" class="btn-close" aria-label="Close" (click)="closeAddCustomerModal()"></button>
+    </div>
+    <div class="modal-body">
+      <div class="row">
+        <div class="col mb-3">
+          <label for="firstNameInput" class="form-label">First Name</label>
+          <input type="text" class="form-control" id="firstNameInput" formControlName="firstName" />
+          <!-- Display error message if the field is touched and invalid -->
+          <div *ngIf="customerForm.get('firstName')?.touched && customerForm.get('firstName')?.hasError('required')"
+               class="text-danger">First Name is required</div>
+        </div>
+        <div class="col mb-3">
+          <label for="lastNameInput" class="form-label">Last Name</label>
+          <input type="text" class="form-control" id="lastNameInput" formControlName="lastName" />
+          <!-- Display error message if the field is touched and invalid -->
+          <div *ngIf="customerForm.get('lastName')?.touched && customerForm.get('lastName')?.hasError('required')"
+               class="text-danger">Last Name is required</div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col mb-3">
+          <label for="companyNameInput" class="form-label">Company Name</label>
+          <input type="text" class="form-control" id="companyNameInput" formControlName="companyName" />
+          <!-- Display error message if the field is touched and invalid -->
+          <div *ngIf="customerForm.get('companyName')?.touched && customerForm.get('companyName')?.hasError('required')"
+               class="text-danger">Company Name is required</div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col mb-3">
+          <label for="streetInput" class="form-label">Street</label>
+          <input type="text" class="form-control" id="streetInput" formControlName="street" />
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-6 mb-3">
+          <label for="cityInput" class="form-label">City</label>
+          <input type="text" class="form-control" id="cityInput" formControlName="city" />
+        </div>
+        <div class="col mb-3">
+          <label for="stateInput" class="form-label">State</label>
+          <input type="text" class="form-control" id="stateInput" formControlName="state" />
+        </div>
+        <div class="col mb-3">
+          <label for="zipInput" class="form-label">Zip</label>
+          <input type="number" class="form-control" id="zipInput" formControlName="zip" />
+        </div>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-secondary btn-sm" (click)="closeAddCustomerModal()">Close</button>
+      <button type="button" class="btn btn-primary btn-sm" (click)="submitAddCustomerForm()" [disabled]="!customerFormIsValid()">Add Customer</button>
+    </div>
+  </div>
+</form>
